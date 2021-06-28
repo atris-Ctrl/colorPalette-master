@@ -50,7 +50,6 @@ def home():
 
 @app.route("/colors")
 def color_page():
-    img = request.args.get("img")
     img_color = request.args.getlist("imgcolor")
     return render_template("colors.html", colors=img_color)
 
