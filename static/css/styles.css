@@ -1,7 +1,7 @@
 body{
-font-family:"Varela Round";
+font-family:"BaksoSapi";
 text-align:center;
-background-color:#FFDCDC;
+background-color: #fae5e5;
 color:#513927;
 }
 
@@ -10,15 +10,52 @@ a{color:white;}
 .navbar{
 background-color:#CE97B0;
 margin-bottom: 0;
+
 }
+
+
+.notification {
+    display: none;
+    padding: 10px;
+    background-color: #c5a49e;
+    color: white;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10%);
+    border-radius: 5px;
+    animation: fadeInOut 2.5s ease-in-out; /* Apply the animation */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {opacity: 0;
+        display: none;}
+}
+
+
+
+
 .title{
 font-size:5.5rem;
 font-weight:bolder;
 margin-bottom: 4rem;
 }
 .header{
-background-color:#FF9292;
+background-color: #fbd7cd;
+opacity: 1;
+background-image:  linear-gradient(135deg, #e5d3dc 25%, transparent 25%), linear-gradient(225deg, #e5d3dc 25%, transparent 25%), linear-gradient(45deg, #e5d3dc 25%, transparent 25%), linear-gradient(315deg, #e5d3dc 25%, #fbd7cd 25%);
+background-position:  70px 0, 70px 0, 0 0, 0 0;
+background-size: 70px 70px;
+background-repeat: repeat;
 }
+
+
 .description{
 text-align: left;
 line-height:1.4;
@@ -29,17 +66,15 @@ border-radius:5%;
 width:70%
 }
 
-.col-md-2{
-padding-left: 12%;
-padding-top:5%
-}
+
 
 .color{
- border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  color:white;
-
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    color:white;
+    pointer:none;
 }
 
 .color-text{
@@ -58,4 +93,9 @@ margin:5rem 6rem;
 }
 .footer-icon{
     padding: 10px;
+}
+
+@font-face {
+    font-family: "BaksoSapi";
+    src: url("BaksoSapi.otf");
 }

@@ -16,9 +16,9 @@
 <section>
 
     <div class="container-fluid">
-
-        <div class="row">
+        <div class="justify-content-center row d-flex justify-content-center align-items-center min-vh-100">
             <h2>🧡 Five Color from the Example, Click to Copy! 🧡</h2>
+            <div class="notification" id="copyNotification">Copied successfully!</div>
             {%for color in colors%}
             <div class="col-md-2">
                 <input id="{{color}}" type="text" hidden>
@@ -30,7 +30,7 @@
         </div>
         <div class="row">
             <h2>Submit Your Picture Now!</h2>
-   <form class="form form-horizontal" method="post" enctype="multipart/form-data">
+            <form class="form form-horizontal" method="post" enctype="multipart/form-data">
                     {{ wtf.quick_form(form) }}
             </form>
 
