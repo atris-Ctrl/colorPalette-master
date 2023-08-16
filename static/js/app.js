@@ -3,7 +3,6 @@ const copyNotification = document.getElementById('copyNotification');
 function Copy(color) {
  var cb = document.getElementById(color);
  cb.value = color;
- cb.style.display = 'block';
  copyNotification.style.display = 'block';
  setTimeout(() => {
   copyNotification.style.display = 'none';
@@ -11,6 +10,5 @@ function Copy(color) {
 
  cb.select();
  document.execCommand('copy');
- cb.style.display = 'none';
 }
 

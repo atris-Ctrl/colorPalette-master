@@ -2,9 +2,10 @@
             <h1>Five Color from Your Picture! Enjoy!✨</h1>
 
 <h2>💖 Your Image 💖:</h2>
-
+    <img src="data:image/jpeg;base64,{{ img }}" alt="Your Image">
 <div class="container-fluid">
     <div class="row">
+            <div class="notification" id="copyNotification">Copied successfully!</div>
             {%for color in colors%}
             <div class="col-md-2">
                 <input id="{{color}}" type="text" hidden>
@@ -12,6 +13,8 @@
                                                                          class="btn color-text">{{color}}</p></div>
             </div>
             {%endfor%}
-        </div>
+
+    </div>
+</div>
 
 {% include "footer.html" %}

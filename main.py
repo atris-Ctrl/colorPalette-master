@@ -26,14 +26,16 @@ def home():
         color_thief = ColorThief(img)
         palette = color_thief.get_palette(color_count=5)
         all_colors = [rgb_to_hex(color) for color in palette]
-        return redirect(url_for("color_page", imgcolor=all_colors))
+        print(img)
+        return redirect(url_for("color_page", img = img ,imgcolor=all_colors))
     return render_template("index.html", colors=colors_example, form=form)
 
 
 @app.route("/colors")
 def color_page():
     img_color = request.args.getlist("imgcolor")
-    return render_template("colors.html", colors=img_color)
+    img = request.args.getlist("img")
+    return render_template("colors.html", img = img, colors=img_color)
 
 
 
